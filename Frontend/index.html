@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Lista de Times</title>
+</head>
+<body>
+  <table>
+    <thead>
+      <th>Id</th>
+      <th>Cidade</th>
+      <th>Estadio</th>
+      <th>Nome</th>
+      <th>Ações</th>
+    </thead>
+    <tbody id="tbody">
+
+    </tbody>
+  </table>
+  <div id="adicionar-time" onclick="MostrarFormularioCriar()">
+    <td class="table-data">+</td>
+    <td class="table-data">Adicionar Time</td>
+  </div>
+
+  <div>
+    <div style="display: none;" id="formulario">
+      <div>
+        <label for="cidade">Cidade</label>
+        <input type="text" name="cidade" id="cidade">
+      </div>
+      <div>
+        <label for="estadio">Estadio</label>
+        <input type="text" name="estadio" id="estadio">
+      </div>
+      <div>
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome">
+      </div>
+      <button id="button-criar" onclick="criar()" style="display: none;">Criar</button>
+      <button id="button-editar" onclick="editar(event)" style="display: none;">Editar</button>
+    </div>    
+  </div>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
